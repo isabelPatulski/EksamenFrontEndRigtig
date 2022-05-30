@@ -13,16 +13,16 @@ function renderMenuItems(evt) {
       case "page-home": {
         break
       }
-      case "page-candidates": {
-        cyclistHandlers
-        searchCyclistHandler
+      case "page-cyclist": {
+        cyclistHandlers()
+        searchCyclistHandler()
 
   
 
        break
       }
-      case "page-add-candidates": {
-        addCyclistElement
+      case "page-add-cyclist": {
+        addCyclistElement()
         break
       }
     }
