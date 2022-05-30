@@ -1,6 +1,6 @@
 import{renderTemplate, setActive, showPage} from "./utils.js"
 import{cyclistHandlers, searchCyclistHandler} from "./js-pages/seeAllCyclists.js"
-import{addCyclistElement} from "./js-pages/addCyclist.js"
+import{addHandelers} from "./js-pages/addCyclist.js"
 
 
 function renderMenuItems(evt) {
@@ -22,7 +22,7 @@ function renderMenuItems(evt) {
        break
       }
       case "page-add-cyclist": {
-        addCyclistElement()
+        addHandelers()
         break
       }
     }

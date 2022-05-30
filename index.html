@@ -47,6 +47,7 @@
     <div>
       <ul id="menu" class="menu">
         <li><a id="page-home" href="#">Home</a></li>
+        <li><a id="page-teams" href="#">All Teams</a></li>
         <li><a id="page-cyclist" href="#">All Cyclists</a></li>
         <li><a id="page-add-cyclist" href="#">Add cyclist</a></li>
       </ul>
@@ -61,6 +62,19 @@
 <template data-id="page-home">
   <h2>Welcome to my page about Tour de France 2022</h2>
   <img src="./images/TOURTOUR.png" alt="TOURTOUR">
+</template>
+
+<template data-id="page-teams">
+  <h2>Teams in Tour de France 2022</h2>
+  <table class="table">
+      <thead>
+<tr><th>ID</th><th>Team</th></tr>
+<tr><td>1</td><td>Team Easy On</td></tr>
+<tr><td>2</td><td>Culten</td></tr>
+      </thead>
+      <tbody id="tbl-body">
+      </tbody>
+  </table>
 </template>
 
 <template data-id="page-cyclist">
@@ -83,10 +97,11 @@
   <template data-id="page-add-cyclist">
     <h2>Add Cyclists</h2>
     <form>
-      <p id="cyclist-id"></p>
-      <input id="input-name" placeholder="Add name" required />
-      <input id="input-team" placeholder="Add team" required />
-      <button id="btn-add-cyclist">Add Cyclist</button>
+      <p id="cyclist-id">
+      <input type="text" id="input-name" placeholder="Add name" required />
+      <input type="int" id="input-id" placeholder="Add team Id" required />
+      <button id="btn-add-cyclist" onclick="location.href='http://www.youtube.com'">Add Cyclist</button>
+      </p>
     </form>
     <p id="cyclist-info-all"></p>
   </template>

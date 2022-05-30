@@ -17,7 +17,7 @@ async function showCyclists(){
         <tr> 
             <td>${cyclist.id}</td>    
             <td>${cyclist.name}</td>
-            <td>${cyclist.team}</td>
+            <td>${cyclist.teamName}</td>
         </tr>
         `).join("\n")
         document.getElementById("tbl-body").innerHTML = tableData
