@@ -29,28 +29,26 @@
      <script src="Dawa/dawa-autocomplete2.min.js"></script>
     
      <script>
-      function seePerson() {
-        document.getElementById("seePerson").style.display = "block";
-        document.getElementById("addPerson").style.display = "none";
+      function seeCandidate() {
+        document.getElementById("seeCandidate").style.display = "block";
+        document.getElementById("addCandidate").style.display = "none";
       }
 
-      function addPerson() {
-        document.getElementById("seePerson").style.display = "none";
-        document.getElementById("addPerson").style.display = "block";
+      function addCandidate() {
+        document.getElementById("seeCandidate").style.display = "none";
+        document.getElementById("addCandidate").style.display = "block";
       }
      </script>
    
-    <title>krak</title>
+    <title>Tour de France 2022</title>
 </head>
 <body>
-
-
   <div class="vertical-menu">
     <div>
       <ul id="menu" class="menu">
         <li><a id="page-home" href="#">Home</a></li>
-        <li><a id="page-people" href="#">People</a></li>
-        <li><a id="page-hobby" href="#">Hobbies</a></li>
+        <li><a id="page-cyclist" href="#">All Cyclists</a></li>
+        <li><a id="page-add-cyclist" href="#">Add cyclist</a></li>
       </ul>
     <div id="content"></div>
   </div>
@@ -61,81 +59,37 @@
 
 
 <template data-id="page-home">
-  <h2>Welcome to the people's search engine</h2>
-  <img src="./images/3musk.jpg" alt="musketers">
+  <h2>Welcome to my page about Tour de France 2022</h2>
+  <img src="./images/TOURTOUR.png" alt="TOURTOUR">
 </template>
 
-<template data-id="page-people">
-  <div id="people-menu" style="display: block; margin-bottom: 1em;">
-    <a id="page-allPerson" href="#" onclick="seePerson()" >All people</a>
-    <a id="page-addPerson" href="#" onclick="addPerson()" >Add person</a>
+<template data-id="page-cyclist">
+    <h2>Cyclists in Tour de France 2022</h2>
     <div class="search-container">
-      <input class="people-search" id="people-search" type="search" placeholder="Search..">
+      <form>
+        <input id="hobby-search" type="text" placeholder="Search..">
+        <!-- <button id="btn-search-hobby" type="button" ><img src="./images/outline_search_black_24dp.png" alt="search" style="height: 1em; width: 1em;"> </button> -->
+      </form>
     </div>
-  </div>
-
-  <div class="people_content" id="seePerson" style="display: block">
-    <h3 id="people-header">
-      <span>All People</span>
-      <input type="search" placeholder="Search.." class="people-search" id="search-input-people" data-table="people-table">
-    </h3>
-    <table class="people-table">
-      <thead>
-        <tr>
-          <th>Id</th>
-          <th>First name</th>
-          <th>Last name</th>
-          <th>Email</th>
-          <th>Phone</th>
-          <th>Street</th>
-          <th>Zipcode</th>
-          <th>City</th>
-        </tr>
-      </thead>
-      <tbody id="people-rows">
-      </tbody>
+    <table class="table">
+        <thead>
+<tr><th>ID</th><th>Name</th><th>Team</th></tr>
+        </thead>
+        <tbody id="tbl-body">
+        </tbody>
     </table>
-  </div>
-
-  <div class="people_content" id="addPerson" style="display: none">
-    <h1>Add person</h1>
-    <form>
-      <input id="input-firstName" placeholder="First name" required />
-      <input id="input-lastName" placeholder="Last name" required />
-      <input id="input-email" type="email" placeholder="Email" required />
-      <input id="input-phone" type="number" required placeholder="Phone number" />
-      <br>
-      <label for='adresse'></label>
-      <div class='autocomplete-container'>
-        <input type="text" id="adresse" placeholder="Addresse">
-      </div>
-      <p style="display: none;">Valgt adresse: <span id="valgtadresse"></p>
-      <br>
-      <button id="btn-add-person">Add person</button>
-    </form>
-    <p id="person-info-all"></p>
-  </div>
-</template>
-
-<template data-id="page-hobby" class="people_content">
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Build a table</title>
-  </head>
-  <body>
-  <h2>All the hobbies you could dream off!</h2>
-  <div class="search-container">
-    <form>
-      <input id="hobby-search" type="text" placeholder="Search..">
-      <!-- <button id="btn-search-hobby" type="button" ><img src="./images/outline_search_black_24dp.png" alt="search" style="height: 1em; width: 1em;"> </button> -->
-    </form>
-  </div>
-  <table id="hobby-table" >
-
-  </table>
-  </body>
-
-  </html>
   </template>
- 
+
+  <template data-id="page-add-cyclist">
+    <h2>Add Cyclists</h2>
+    <form>
+      <p id="cyclist-id"></p>
+      <input id="input-name" placeholder="Add name" required />
+      <input id="input-team" placeholder="Add team" required />
+      <button id="btn-add-cyclist">Add Cyclist</button>
+    </form>
+    <p id="cyclist-info-all"></p>
+  </template>
+    
+    
+

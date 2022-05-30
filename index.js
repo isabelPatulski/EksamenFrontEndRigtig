@@ -1,9 +1,7 @@
 import{renderTemplate, setActive, showPage} from "./utils.js"
-import{showHobbies, searchHobbyHandler} from "./js-pages/createHobby.js"
-import{getAllPeople} from "./js-pages/seePeoplePage.js"
-import{addPersonElement} from "./js-pages/addPerson.js"
-import{searchPeopleFunction} from "./js-pages/peoplePage.js"
-import{setDawa} from "./Dawa/script.js"
+import{cyclistHandlers, searchCyclistHandler} from "./js-pages/seeAllCyclists.js"
+import{addCyclistElement} from "./js-pages/addCyclist.js"
+
 
 function renderMenuItems(evt) {
     const element = evt.target
@@ -15,17 +13,16 @@ function renderMenuItems(evt) {
       case "page-home": {
         break
       }
-      case "page-people": {
-        getAllPeople()
-        setDawa()
-        addPersonElement()
-        searchPeopleFunction()
+      case "page-candidates": {
+        cyclistHandlers
+        searchCyclistHandler
+
+  
 
        break
       }
-      case "page-hobby": {
-        showHobbies()
-        searchHobbyHandler()
+      case "page-add-candidates": {
+        addCyclistElement
         break
       }
     }
