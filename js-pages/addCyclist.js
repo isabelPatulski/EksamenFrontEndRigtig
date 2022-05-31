@@ -7,19 +7,7 @@ const cyclistURL =  URL + "/cyclists"
      addCyclist()
      console.log("AddHandlers")
      document.getElementById("btn-add-cyclist").addEventListener("click", addCyclist)
-    }
-
-
-function addTeam(team){
-    const id = team.params.id;
-    const teamName = team.params.teamName;
-    console.log("AddTeam")
-    
-    document.getElementById("id").innerHTML = id
-    document.getElementById("teamName").innerHTML = teamName
-
 }
-
 
 async function addCyclist(){
     const id = document.getElementById("cyclist-id").innerHTML

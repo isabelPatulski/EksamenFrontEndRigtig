@@ -47,7 +47,7 @@
 
 </html>
 
-
+<!--HOMEPAGE-->
 <template data-id="page-home">
   <h2>Welcome to my page about Tour de France 2022</h2>
   <img src="./images/TOURTOUR.png" alt="TOURTOUR">
@@ -57,24 +57,19 @@
   <h2>Teams in Tour de France 2022</h2>
   <table class="table">
       <thead>
-<tr><th>ID</th><th>Team</th></tr>
-<tr><td>1</td><td>Team Easy On</td></tr>
-<tr><td>2</td><td>Culten</td></tr>
+        <tr><th>ID</th><th>Team</th></tr>
+        <tr><td>1</td><td>Team Easy On</td></tr>
+        <tr><td>2</td><td>Culten</td></tr>
       </thead>
       <tbody id="tbl-body">
       </tbody>
   </table>
 </template>
 
+
+<!--SHOW ALL CYCLISTS AND DELETE-->
 <template data-id="page-cyclist">
     <h2>Cyclists in Tour de France 2022</h2>
-     <!--s
-    <div class="search-container">
-      <form>
-        <input id="cyclist-search" type="text" placeholder="Search..">
-      </form>
-    </div>
-  -->
     <table class="table">
         <thead>
 <tr><th>ID</th><th>Name</th><th>Team</th></tr>
@@ -85,6 +80,8 @@
     <input id="cyclist-deleteId" type="text" placeholder="Enter cyclist Id"><button id="delete-btn">Delete by id</button>
   </template>
 
+
+<!--ADD CYCLIST-->
   <template data-id="page-add-cyclist">
     <h2>Add Cyclists</h2>
     <form>
