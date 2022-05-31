@@ -1,4 +1,4 @@
-import { handleHttpErrors } from "../fetchUtils.js";
+import { handleHttpErrors, makeOptions } from "../fetchUtils.js";
 import { URL } from "../settings.js";
 
 const cyclistURL = URL + "/cyclists"
@@ -25,11 +25,11 @@ async function showCyclists(){
       console.log(err.message)
     } }
 
-    export function searchCyclistHandler(){
-        //document.getElementById("btn-search-hobby").onclick = function () {searchHobby()
-        //}
-          document.getElementById("hobby-search").oninput = function () {searchCyclist()}
-      }
+    // export function searchCyclistHandler(){
+    //     //document.getElementById("btn-search-hobby").onclick = function () {searchHobby()
+    //     //}
+    //       document.getElementById("hobby-search").oninput = function () {searchCyclist()}
+    //   }
       
       export function searchCyclist(){
               // Declare variables
@@ -54,4 +54,22 @@ async function showCyclists(){
 
             
     
+            }
+
+            export function deleteHandler(match){
+                deleteCyclist()
+                console.log("deleteHandler")
+                document.getElementById("delete-btn").addEventListener("click", deleteCyclist)
+            
+            }
+            
+            
+            async function deleteCyclist(){
+                const cyclistId = document.getElementById("cyclist-deleteId").value
+                console.log("cyclist Id= ", cyclistId)
+                try{
+                    await fetch(cyclistURL+"/"+cyclistId, makeOptions("DELETE")).then(res => handleHttpErrors (res))                    
+                }catch(error){ 
+                        console.log(error.message)
+                    }
             }

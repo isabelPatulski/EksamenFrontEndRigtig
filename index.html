@@ -28,22 +28,11 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
      <script src="Dawa/dawa-autocomplete2.min.js"></script>
     
-     <script>
-      function seeCandidate() {
-        document.getElementById("seeCandidate").style.display = "block";
-        document.getElementById("addCandidate").style.display = "none";
-      }
-
-      function addCandidate() {
-        document.getElementById("seeCandidate").style.display = "none";
-        document.getElementById("addCandidate").style.display = "block";
-      }
-     </script>
    
-    <title>Tour de France 2022</title>
+<title>Tour de France 2022</title>
 </head>
 <body>
-  <div class="vertical-menu">
+  <div class="horizontal-menu">
     <div>
       <ul id="menu" class="menu">
         <li><a id="page-home" href="#">Home</a></li>
@@ -92,6 +81,7 @@
         <tbody id="tbl-body">
         </tbody>
     </table>
+    <input id="cyclist-deleteId" type="text" placeholder="Enter cyclist Id"><button id="delete-btn" type="submit" onclick="window.location.reload();">Delete by id</button>
   </template>
 
   <template data-id="page-add-cyclist">
