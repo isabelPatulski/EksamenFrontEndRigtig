@@ -68,12 +68,13 @@
 
 <template data-id="page-cyclist">
     <h2>Cyclists in Tour de France 2022</h2>
+     <!--s
     <div class="search-container">
       <form>
         <input id="cyclist-search" type="text" placeholder="Search..">
-        <!-- <button id="btn-search-hobby" type="button" ><img src="./images/outline_search_black_24dp.png" alt="search" style="height: 1em; width: 1em;"> </button> -->
       </form>
     </div>
+  -->
     <table class="table">
         <thead>
 <tr><th>ID</th><th>Name</th><th>Team</th></tr>
@@ -81,7 +82,7 @@
         <tbody id="tbl-body">
         </tbody>
     </table>
-    <input id="cyclist-deleteId" type="text" placeholder="Enter cyclist Id"><button id="delete-btn" type="submit" onclick="window.location.reload();">Delete by id</button>
+    <input id="cyclist-deleteId" type="text" placeholder="Enter cyclist Id"><button id="delete-btn">Delete by id</button>
   </template>
 
   <template data-id="page-add-cyclist">
@@ -90,7 +91,7 @@
       <p id="cyclist-id">
       <input type="text" id="input-name" placeholder="Add name" required />
       <input type="int" id="input-id" placeholder="Add team Id" required />
-      <button id="btn-add-cyclist" onclick="location.href='http://www.youtube.com'">Add Cyclist</button>
+      <button id="btn-add-cyclist">Add Cyclist</button>
       </p>
     </form>
     <p id="cyclist-info-all"></p>

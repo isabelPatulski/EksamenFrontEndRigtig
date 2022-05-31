@@ -16,9 +16,6 @@ function renderMenuItems(evt) {
       case "page-cyclist": {
         cyclistHandlers()
         deleteHandler()
-
-  
-
        break
       }
       case "page-add-cyclist": {

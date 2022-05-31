@@ -1,5 +1,6 @@
 import {makeOptions, handleHttpErrors} from "../fetchUtils.js"
 import {URL} from "../settings.js"
+
 const cyclistURL =  URL + "/cyclists"
 
  export function addHandlers(match){
@@ -35,4 +36,5 @@ async function addCyclist(){
         }catch (error) { 
             console.log("Error: ",error.message)
     }
+    searchCyclist()
 }
