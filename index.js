@@ -7,9 +7,10 @@ function renderMenuItems(evt) {
     const element = evt.target
     setActive(element)
     const id = element.id;
-    renderTemplate(id)  //This setups the HTML for the page
+    renderTemplate(id)  
     switch (id) {
-      //Here you can execute JavaScript for the selected page
+      
+      //Henter javascript metoder 
       case "page-home": {
         break
       }
@@ -26,4 +27,4 @@ function renderMenuItems(evt) {
   }
 
 document.getElementById("menu").onclick = renderMenuItems;
-showPage("page-home") //Set the default page to render
+showPage("page-home") 
